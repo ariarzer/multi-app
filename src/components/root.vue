@@ -38,6 +38,14 @@
 
     width: 100%;
     height: 100%;
+
+    background-color: #E7E8EC;
+  }
+
+  header,
+  .link,
+  .app{
+    color: #243615;
   }
 
   header,
@@ -49,6 +57,8 @@
 
   header{
     grid-area: header;
+
+    background-color: #9DDE5B;
   }
 
   .sidebar{
@@ -60,5 +70,8 @@
 
   .app{
     grid-area: app;
+
+    background-color: white;
+    border: 1px solid #E3E4E8;
   }
 </style>
