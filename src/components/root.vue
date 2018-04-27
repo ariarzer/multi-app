@@ -71,6 +71,10 @@
     flex-direction: column;
   }
 
+  .link{
+    text-decoration: none;
+  }
+
   .app{
     grid-area: app;
 
