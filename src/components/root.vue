@@ -14,7 +14,7 @@
 
 <style>
   html,
-  body{
+  body {
     padding: 0px;
     margin: 0px;
   }
@@ -23,20 +23,19 @@
     outline: none;
   }
 
-  body{
+  body {
     width: 100vw;
     height: 100vh;
     font-size: 20px;
   }
 
-  .multi-app{
+  .multi-app {
     --ind: 15px;
 
     display: grid;
-    grid-template-rows: 10% auto ;
+    grid-template-rows: 10% auto;
     grid-template-columns: minmax(170px, 15%) 1fr;
-    grid-template-areas: "header header"
-                         "sidebar app";
+    grid-template-areas: "header header" "sidebar app";
 
     width: 100%;
     height: 100%;
@@ -46,18 +45,18 @@
 
   header,
   .link,
-  .app{
+  .app {
     color: #243615;
   }
 
   header,
-  .app{
+  .app {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  header{
+  header {
     grid-area: header;
 
     background-color: #9DDE5B;
@@ -66,7 +65,7 @@
     font-weight: bolder;
   }
 
-  .sidebar{
+  .sidebar {
     grid-area: sidebar;
 
     display: flex;
@@ -75,13 +74,21 @@
     margin-top: var(--ind);
   }
 
-  .link{
+  .link {
     text-decoration: none;
 
-    margin: var(--ind);
+    padding: var(--ind);
   }
 
-  .app{
+  .link:hover {
+    background-color: rgba(157, 222, 91, 0.5);
+  }
+
+  .router-link-active {
+    background-color: rgba(157, 222, 91, 0.25);
+  }
+
+  .app {
     grid-area: app;
 
     background-color: white;
