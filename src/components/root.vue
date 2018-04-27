@@ -30,6 +30,8 @@
   }
 
   .multi-app{
+    --ind: 15px;
+
     display: grid;
     grid-template-rows: 10% auto ;
     grid-template-columns: minmax(170px, 15%) 1fr;
@@ -69,10 +71,14 @@
 
     display: flex;
     flex-direction: column;
+
+    margin-top: var(--ind);
   }
 
   .link{
     text-decoration: none;
+
+    margin: var(--ind);
   }
 
   .app{
@@ -80,5 +86,7 @@
 
     background-color: white;
     border: 1px solid #E3E4E8;
+
+    margin: var(--ind);
   }
 </style>
