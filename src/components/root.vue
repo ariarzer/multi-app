@@ -59,6 +59,9 @@
     grid-area: header;
 
     background-color: #9DDE5B;
+
+    font-size: 30px;
+    font-weight: bolder;
   }
 
   .sidebar{
