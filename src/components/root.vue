@@ -1,7 +1,7 @@
 <template>
   <div class="multi-app">
 
-    <header>Multifunctional application</header>
+    <header class="header">Multifunctional application</header>
 
     <div class="sidebar">
       <router-link to="/app1" class="link">App1</router-link>
@@ -39,20 +39,20 @@
     background-color: #E7E8EC;
   }
 
-  header,
+  .header,
   .link,
   .app {
     color: #243615;
   }
 
-  header,
+  .header,
   .app {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  header {
+  .header {
     grid-area: header;
 
     background-color: #9DDE5B;
