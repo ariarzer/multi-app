@@ -26,7 +26,13 @@
   }
 
   .multi-app {
-    --ind: 15px;
+    --indent: 15px;
+
+    --active-green: rgba(157, 222, 91, 0.25);
+    --hover-green: rgba(157, 222, 91, 0.5);
+    --light-green: rgb(157, 222, 91);
+    --dark-green: rgb(36, 54, 21);
+    --dark-grey: rgb(227, 228, 232);
 
     display: grid;
     grid-template-rows: 10% auto;
@@ -36,13 +42,13 @@
     width: 100%;
     height: 100%;
 
-    background-color: #E7E8EC;
+    background-color: rgb(237, 238, 240);
   }
 
   .header,
   .link,
   .app {
-    color: #243615;
+    color: var(--dark-green);
   }
 
   .header,
@@ -55,7 +61,7 @@
   .header {
     grid-area: header;
 
-    background-color: #9DDE5B;
+    background-color: var(--light-green);
 
     font-size: 30px;
     font-weight: bolder;
@@ -67,29 +73,29 @@
     display: flex;
     flex-direction: column;
 
-    margin-top: var(--ind);
+    margin-top: var(--indent);
   }
 
   .link {
     text-decoration: none;
 
-    padding: var(--ind);
+    padding: var(--indent);
   }
 
   .link:hover {
-    background-color: rgba(157, 222, 91, 0.5);
+    background-color: var(--hover-green);
   }
 
   .router-link-active {
-    background-color: rgba(157, 222, 91, 0.25);
+    background-color: var(--active-green);
   }
 
   .app {
     grid-area: app;
 
     background-color: white;
-    border: 1px solid #E3E4E8;
+    border: 1px solid var(--dark-grey);
 
-    margin: var(--ind);
+    margin: var(--indent);
   }
 </style>
