@@ -1,16 +1,27 @@
 <template>
-  <div class="multi-app">
+  <div class="organiser">
 
-    <header class="header">Multifunctional application</header>
+    <header class="header">Organiser</header>
 
     <div class="sidebar">
-      <router-link to="/app1" class="link">App1</router-link>
-      <router-link to="/app2" class="link">App2</router-link>
+      <router-link to="/counter" class="link">Counter</router-link>
     </div>
 
-    <router-view class="app"></router-view>
+    <div class="app">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
+
+<script>
+  import Counter from '~/components/app/counter/counter.vue';
+
+  export default {
+    component: {
+      Counter,
+    },
+  }
+</script>
 
 <style>
   html,
@@ -25,7 +36,7 @@
     font-size: 20px;
   }
 
-  .multi-app {
+  .organiser {
     --indent: 15px;
 
     --active-green: rgba(157, 222, 91, 0.25);
@@ -97,5 +108,15 @@
     border: 1px solid var(--dark-grey);
 
     margin: var(--indent);
+  }
+
+  .button {
+    background-color: var(--light-green);
+    border-radius: 3px;
+    border: none;
+  }
+
+  .button:active {
+    background-color: var(--light-green);
   }
 </style>

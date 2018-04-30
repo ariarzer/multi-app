@@ -3,12 +3,10 @@ import VueRouter from 'vue-router';
 
 Vue.use(VueRouter);
 
-const app1 = {template: '<div>App1!!!</div>'};
-const app2 = {template: '<div>App2!!!</div>'};
+import Counter from '~/components/app/counter/counter.vue';
 
 const routes = [
-  {path: '/app1', component: app1},
-  {path: '/app2', component: app2},
+  {path: '/counter', component: Counter},
 ];
 
 export default new VueRouter({
