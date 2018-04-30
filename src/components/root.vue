@@ -7,7 +7,9 @@
       <router-link to="/counter" class="link">Counter</router-link>
     </div>
 
-    <router-view class="app"></router-view>
+    <div class="app">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
@@ -109,12 +111,12 @@
   }
 
   .button {
-    background-color: #9DDE5B;
+    background-color: var(--light-green);
     border-radius: 3px;
     border: none;
   }
 
   .button:active {
-    background-color: #89c151;
+    background-color: var(--light-green);
   }
 </style>

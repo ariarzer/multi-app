@@ -28,10 +28,9 @@
 
 <style>
   .counter {
-    max-width: 200px;
-    max-height: 200px;
-
     display: grid;
+    grid-template-columns: 100px 100px;
+    grid-template-row: 100px 100px;
     grid-template-areas: "count count" "inc dec";
     justify-items: center;
   }
