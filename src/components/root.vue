@@ -4,13 +4,22 @@
     <header class="header">Multifunctional application</header>
 
     <div class="sidebar">
-      <router-link to="/app1" class="link">App1</router-link>
-      <router-link to="/app2" class="link">App2</router-link>
+      <router-link to="/counter" class="link">Counter</router-link>
     </div>
 
     <router-view class="app"></router-view>
   </div>
 </template>
+
+<script>
+  import Counter from '~/components/app/counter/counter.vue';
+
+  export default {
+    component: {
+      Counter,
+    },
+  }
+</script>
 
 <style>
   html,
@@ -97,5 +106,15 @@
     border: 1px solid var(--dark-grey);
 
     margin: var(--indent);
+  }
+
+  .button {
+    background-color: #9DDE5B;
+    border-radius: 3px;
+    border: none;
+  }
+
+  .button:active {
+    background-color: #89c151;
   }
 </style>
