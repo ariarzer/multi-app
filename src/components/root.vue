@@ -19,10 +19,6 @@
     margin: 0px;
   }
 
-  a, a:active {
-    outline: none;
-  }
-
   body {
     width: 100vw;
     height: 100vh;
