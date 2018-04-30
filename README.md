@@ -1,4 +1,4 @@
-# Multifunctional application
+# Organiser
 
 The application contains:
 

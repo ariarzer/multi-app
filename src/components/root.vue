@@ -1,7 +1,7 @@
 <template>
-  <div class="multi-app">
+  <div class="organiser">
 
-    <header class="header">Multifunctional application</header>
+    <header class="header">Organiser</header>
 
     <div class="sidebar">
       <router-link to="/counter" class="link">Counter</router-link>
@@ -36,7 +36,7 @@
     font-size: 20px;
   }
 
-  .multi-app {
+  .organiser {
     --indent: 15px;
 
     --active-green: rgba(157, 222, 91, 0.25);
