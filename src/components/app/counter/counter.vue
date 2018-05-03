@@ -43,9 +43,6 @@
 
   .inc,
   .dec {
-    height: 2em;
-    width: 2em;
-
     display: flex;
     justify-content: center;
   }
@@ -53,7 +50,7 @@
   .inc,
   .dec,
   .counter_count {
-    color: #243615;
+    color: var(--dark-green);
     font-size: 30px;
   }
 

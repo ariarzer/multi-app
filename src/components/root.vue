@@ -5,6 +5,7 @@
 
     <div class="sidebar">
       <router-link to="/counter" class="link">Counter</router-link>
+      <router-link to="/calculator" class="link">Calculator</router-link>
     </div>
 
     <div class="app">
@@ -12,16 +13,6 @@
     </div>
   </div>
 </template>
-
-<script>
-  import Counter from '~/components/app/counter/counter.vue';
-
-  export default {
-    component: {
-      Counter,
-    },
-  }
-</script>
 
 <style>
   html,
@@ -38,6 +29,7 @@
 
   .organiser {
     --indent: 15px;
+    --button-size: calc(1em + 2 * var(--indent));
 
     --active-green: rgba(157, 222, 91, 0.25);
     --hover-green: rgba(157, 222, 91, 0.5);
@@ -114,6 +106,11 @@
     background-color: var(--light-green);
     border-radius: 3px;
     border: none;
+
+    height: var(--button-size);
+    width: var(--button-size);
+
+    padding: var(--indent);
   }
 
   .button:active {
