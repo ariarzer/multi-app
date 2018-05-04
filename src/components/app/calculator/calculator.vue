@@ -27,6 +27,8 @@
   import Pin from './pin.vue'
   import calc from 'calculator';
 
+  const operators = ['+', '-', '*', '/'];
+
   export default {
     components: {Pin},
     data: function () {
@@ -51,9 +53,15 @@
           console.log('pre equ ' + this.pre);
         }
         else {
-          if (this.pre == '=') {
-            this.value = payload.text;
-            this.pre = payload.text;
+          if ('=' === this.pre) {
+            if (operators.includes(payload.text)) {
+              this.value += payload.text;
+              this.pre = payload.text;
+            }
+            else {
+              this.value = payload.text;
+              this.pre = payload.text;
+            }
           }
           else {
             this.value += payload.text;
