@@ -8,4 +8,7 @@ The application contains:
 
 ### ToDo List
 
-#### Coming soon ...
+### Calculator
+
+You can read about it [here](https://github.com/ariarzer/calculator).
+
