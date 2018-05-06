@@ -2,11 +2,10 @@
   <div class="calculator">
     <h2>Calculator</h2>
     <div class="calc">
-      <div
-        class="calculator_output"
+      <input
+        class="calculator_io"
+        v-model="value"
       >
-        {{value}}
-      </div>
 
       <div class="calculator_pins-field">
         <pin
@@ -78,21 +77,21 @@
     --gap: calc(var(--indent) / 2);
   }
 
-  .calculator_output {
-    display: flex;
-
-    width: calc(4 * var(--button-size) + 3 * var(--gap));
+  .calculator_io {
+    width: calc(4 * var(--button-size) + 4 * var(--gap) );
     height: var(--button-size);
     box-sizing: border-box;
 
     padding: var(--indent);
     margin-bottom: var(--gap);
 
-    background-color: var(--hover-green);
+    background-color: var(--active-green);
+
+    border: none;
   }
 
-  .calculator_output:focus {
-    background-color: var(--active-green);
+  .calculator_io:focus {
+    background-color: var(--hover-green);
   }
 
   .calculator_pins-field {
