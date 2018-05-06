@@ -5,6 +5,7 @@
 
     <div class="sidebar">
       <router-link to="/counter" class="link">Counter</router-link>
+      <router-link to="/todo-list" class="link">TODO-list</router-link>
     </div>
 
     <div class="app">
