@@ -1,5 +1,5 @@
 {
-  "name": "multi-app",
+  "name": "organizer",
   "version": "1.0.0",
   "description": "Organiser with Vue.js",
   "main": "index.js",
@@ -12,7 +12,8 @@
   "dependencies": {
     "vue": "^2.5.16",
     "vue-route": "^1.5.1",
-    "vuex": "^3.0.1"
+    "vuex": "^3.0.1",
+    "calculator": "github:ariarzer/calculator"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
