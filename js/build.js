@@ -11860,6 +11860,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 
 var operators = ['+', '-', '*', '/'];
 
@@ -11874,12 +11875,8 @@ exports.default = {
   },
   methods: {
     pin: function pin(payload) {
-      console.log('pre  ' + this.pre);
-
       if (payload.text === '=') {
-        this.value = (0, _calculator2.default)(this.value);
-        this.pre = '=';
-        console.log('pre equ ' + this.pre);
+        this.calculate();
       } else {
         if ('=' === this.pre) {
           if (operators.includes(payload.text)) {
@@ -11894,6 +11891,11 @@ exports.default = {
           this.pre = payload.text;
         }
       }
+    },
+    calculate: function calculate() {
+      this.value = (0, _calculator2.default)(this.value);
+      this.pre = '=';
+      console.log('submit');
     }
   }
 };
@@ -15739,7 +15741,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.calculator {\n  --gap: calc(var(--indent) / 2);\n}\n.calculator_io {\n  width: calc(4 * var(--button-size) + 4 * var(--gap) );\n  height: var(--button-size);\n  box-sizing: border-box;\n\n  padding: var(--indent);\n  margin-bottom: var(--gap);\n\n  background-color: var(--active-green);\n\n  border: none;\n}\n.calculator_io:focus {\n  background-color: var(--hover-green);\n}\n.calculator_pins-field {\n  display: grid;\n  grid-template-columns: repeat(4, var(--button-size));\n  grid-template-rows: repeat(4, var(--button-size));\n\n  grid-column-gap: var(--gap);\n  grid-row-gap: var(--gap);\n\n  justify-items: center;\n  align-items: center;\n}\n", ""]);
+exports.push([module.i, "\n.calculator {\n  --gap: calc(var(--indent) / 2);\n}\n.calculator_io {\n  width: calc(4 * var(--button-size) + 4 * var(--gap));\n  height: var(--button-size);\n  box-sizing: border-box;\n\n  padding: var(--indent);\n  margin-bottom: var(--gap);\n\n  background-color: var(--active-green);\n\n  border: none;\n}\n.calculator_io:focus {\n  background-color: var(--hover-green);\n}\n.calculator_pins-field {\n  display: grid;\n  grid-template-columns: repeat(4, var(--button-size));\n  grid-template-rows: repeat(4, var(--button-size));\n\n  grid-column-gap: var(--gap);\n  grid-row-gap: var(--gap);\n\n  justify-items: center;\n  align-items: center;\n}\n", ""]);
 
 // exports
 
@@ -15968,6 +15970,15 @@ var render = function() {
         staticClass: "calculator_io",
         domProps: { value: _vm.value },
         on: {
+          keyup: function($event) {
+            if (
+              !("button" in $event) &&
+              _vm._k($event.keyCode, "enter", 13, $event.key, "Enter")
+            ) {
+              return null
+            }
+            return _vm.calculate($event)
+          },
           input: function($event) {
             if ($event.target.composing) {
               return
