@@ -5,6 +5,7 @@
       <input
         class="calculator_io"
         v-model="value"
+        v-on:keyup.enter="calculate"
       >
 
       <div class="calculator_pins-field">
@@ -44,14 +45,11 @@
     },
     methods: {
       pin: function (payload) {
-        console.log('pre  ' + this.pre);
-
         if (payload.text === '=') {
-          this.value = calc(this.value);
-          this.pre = '=';
-          console.log('pre equ ' + this.pre);
+          this.calculate();
         }
-        else {
+        else
+        {
           if ('=' === this.pre) {
             if (operators.includes(payload.text)) {
               this.value += payload.text;
@@ -67,6 +65,11 @@
             this.pre = payload.text;
           }
         }
+      },
+      calculate: function () {
+        this.value = calc(this.value);
+        this.pre = '=';
+        console.log('submit');
       }
     }
   }
@@ -78,7 +81,7 @@
   }
 
   .calculator_io {
-    width: calc(4 * var(--button-size) + 4 * var(--gap) );
+    width: calc(4 * var(--button-size) + 4 * var(--gap));
     height: var(--button-size);
     box-sizing: border-box;
 
