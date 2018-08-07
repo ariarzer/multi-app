@@ -81,12 +81,15 @@
   }
 
   .calculator_io {
-    width: calc(4 * var(--button-size) + 4 * var(--gap));
+    width: calc(4 * var(--button-size) + 7 * var(--gap));
     height: var(--button-size);
     box-sizing: border-box;
 
     padding: var(--indent);
     margin-bottom: var(--gap);
+
+    margin-left: calc(var(--gap) / 2);
+    margin-right: calc(var(--gap) / 2);
 
     background-color: var(--active-green);
 
