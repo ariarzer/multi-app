@@ -14993,7 +14993,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.counter {\n  display: grid;\n  grid-template-columns: 100px 100px;\n  grid-template-row: 100px 100px;\n  grid-template-areas: \"count count\" \"inc dec\";\n  justify-items: center;\n}\n.inc {\n  grid-area: inc;\n}\n.dec {\n  grid-area: dec;\n}\n.inc,\n.dec {\n  display: flex;\n  justify-content: center;\n}\n.inc,\n.dec,\n.counter_count {\n  color: var(--dark-green);\n  font-size: 30px;\n}\n.counter_count {\n  grid-area: count;\n}\n", ""]);
+exports.push([module.i, "\n.counter {\n  display: grid;\n  grid-template-columns: 100px 100px;\n  grid-template-rows: 100px 100px;\n  grid-template-areas: \"count count\" \"inc dec\";\n  justify-items: center;\n  align-items: center;\n}\n.inc {\n  grid-area: inc;\n}\n.dec {\n  grid-area: dec;\n}\n.inc,\n.dec {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n}\n.inc,\n.dec,\n.counter_count {\n  color: var(--dark-green);\n  font-size: 30px;\n}\n.counter_count {\n  grid-area: count;\n}\n", ""]);
 
 // exports
 
@@ -15741,7 +15741,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, "\n.calculator {\n  --gap: calc(var(--indent) / 2);\n}\n.calculator_io {\n  width: calc(4 * var(--button-size) + 4 * var(--gap));\n  height: var(--button-size);\n  box-sizing: border-box;\n\n  padding: var(--indent);\n  margin-bottom: var(--gap);\n\n  background-color: var(--active-green);\n\n  border: none;\n}\n.calculator_io:focus {\n  background-color: var(--hover-green);\n}\n.calculator_pins-field {\n  display: grid;\n  grid-template-columns: repeat(4, var(--button-size));\n  grid-template-rows: repeat(4, var(--button-size));\n\n  grid-column-gap: var(--gap);\n  grid-row-gap: var(--gap);\n\n  justify-items: center;\n  align-items: center;\n}\n", ""]);
+exports.push([module.i, "\n.calculator {\n  --gap: calc(var(--indent) / 2);\n}\n.calculator_io {\n  width: calc(4 * var(--button-size) + 7 * var(--gap));\n  height: var(--button-size);\n  box-sizing: border-box;\n\n  padding: var(--indent);\n  margin-bottom: var(--gap);\n\n  margin-left: calc(var(--gap) / 2);\n  margin-right: calc(var(--gap) / 2);\n\n  background-color: var(--active-green);\n\n  border: none;\n}\n.calculator_io:focus {\n  background-color: var(--hover-green);\n}\n.calculator_pins-field {\n  display: grid;\n  grid-template-columns: repeat(4, var(--button-size));\n  grid-template-rows: repeat(4, var(--button-size));\n\n  grid-column-gap: var(--gap);\n  grid-row-gap: var(--gap);\n\n  justify-items: center;\n  align-items: center;\n}\n", ""]);
 
 // exports
 
