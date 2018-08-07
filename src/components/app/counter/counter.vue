@@ -28,9 +28,10 @@
   .counter {
     display: grid;
     grid-template-columns: 100px 100px;
-    grid-template-row: 100px 100px;
+    grid-template-rows: 100px 100px;
     grid-template-areas: "count count" "inc dec";
     justify-items: center;
+    align-items: center;
   }
 
   .inc {
@@ -45,6 +46,7 @@
   .dec {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .inc,
