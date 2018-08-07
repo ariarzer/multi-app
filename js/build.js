@@ -496,7 +496,7 @@ Object.defineProperty(exports, "__esModule", {
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 /*!
- * Vue.js v2.5.16
+ * Vue.js v2.5.17
  * (c) 2014-2018 Evan You
  * Released under the MIT License.
  */
@@ -5069,7 +5069,7 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
   value: FunctionalRenderContext
 });
 
-Vue.version = '2.5.16';
+Vue.version = '2.5.17';
 
 /*  */
 
@@ -12361,7 +12361,7 @@ var render = function() {
     _c("header", { staticClass: "header" }, [_vm._v("Organiser")]),
     _vm._v(" "),
     _c(
-      "div",
+      "nav",
       { staticClass: "sidebar" },
       [
         _c("router-link", { staticClass: "link", attrs: { to: "/counter" } }, [
