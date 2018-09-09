@@ -4,7 +4,6 @@
     <header class="header">Organiser</header>
 
     <nav class="sidebar">
-      <router-link to="/counter" class="link">Counter</router-link>
       <router-link to="/todo-list" class="link">TODO-list</router-link>
       <router-link to="/calculator" class="link">Calculator</router-link>
     </nav>

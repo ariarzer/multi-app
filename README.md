@@ -2,10 +2,6 @@
 
 The application contains:
 
-### Counter
-
-### Clock
-
 ### ToDo List
 
 Here you can save your tasks.  
